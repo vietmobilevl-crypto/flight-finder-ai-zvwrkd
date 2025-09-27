@@ -19,19 +19,18 @@ export default function Button({ text, onPress, style, textStyle }: ButtonProps)
 const styles = StyleSheet.create({
   button: {
     backgroundColor: colors.primary,
-    padding: 14,
-    borderRadius: 8,
-    marginTop: 10,
-    width: '100%',
-    boxShadow: '0px 2px 3.84px rgba(0, 0, 0, 0.25)',
-    elevation: 5,
+    paddingHorizontal: 24,
+    paddingVertical: 12,
+    borderRadius: 12,
     alignItems: 'center',
     justifyContent: 'center',
+    boxShadow: '0px 2px 8px rgba(37, 99, 235, 0.2)',
+    elevation: 3,
   },
   buttonText: {
-    color: '#fff',
+    color: 'white',
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: '600',
     textAlign: 'center',
   },
 });

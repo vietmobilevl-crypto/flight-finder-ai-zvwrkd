@@ -4,6 +4,8 @@ import { Platform } from 'react-native';
 import { useEffect, useState } from 'react';
 import { setupErrorLogging } from '../utils/errorLogger';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import BottomNavigation from '../components/BottomNavigation';
+import { View } from 'react-native';
 
 const STORAGE_KEY = 'emulated_device';
 
@@ -47,12 +49,15 @@ export default function RootLayout() {
   return (
     <SafeAreaProvider>
         <GestureHandlerRootView style={{ flex: 1 }}>
-          <Stack
-            screenOptions={{
-              headerShown: false,
-              animation: 'default',
-            }}
-          />
+          <View style={{ flex: 1 }}>
+            <Stack
+              screenOptions={{
+                headerShown: false,
+                animation: 'default',
+              }}
+            />
+            <BottomNavigation />
+          </View>
         </GestureHandlerRootView>
     </SafeAreaProvider>
   );
